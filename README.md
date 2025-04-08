@@ -1,4 +1,5 @@
-# 🚀 DeployManager
+
+#  👾 DeployManager
 
 Sistema simples de gerenciamento de aplicações para fins de estudo, desenvolvido com **.NET 8**, **Entity Framework Core** e **SQL Server**.
 
@@ -47,6 +48,56 @@ Base URL: `https://localhost:7192/api/Application`
 
 1. **Clone o projeto:**
 
-```bash
-git clone https://github.com/seu-usuario/DeployManager.git
-cd DeployManager
+   ```bash
+   git clone https://github.com/seu-usuario/DeployManager.git
+   cd DeployManager
+   ```
+
+2. **Configure sua string de conexão** em `appsettings.json`:
+
+   ```json
+   "ConnectionStrings": {
+     "DefaultConnection": "Server=localhost;Database=DeployManagerDB;User Id=seuUsuario;Password=suaSenha;"
+   }
+   ```
+
+3. **Execute os seguintes comandos no Package Manager Console** para gerar o banco de dados:
+
+   ```bash
+   Add-Migration InitialCreate
+   Update-Database
+   ```
+
+4. **Execute a aplicação (F5 ou Ctrl+F5)**  
+   O navegador abrirá com a interface do **Swagger**, onde você pode testar todos os endpoints da API.
+
+---
+
+## 🧠 Conhecimentos Praticados
+
+- Migrations e estruturação de banco de dados com EF Core
+- Mapeamento de rotas com Minimal APIs
+- Operações assíncronas com banco de dados
+- Testes via Swagger UI
+- Separação de camadas e boas práticas em projetos ASP.NET Core
+
+---
+
+## 💡 Melhorias Futuras
+
+- Autenticação e autorização com Identity
+- Interface front-end com React ou Blazor
+- Deploy em ambiente de nuvem (ex: Azure ou AWS)
+- Logging e monitoramento
+
+---
+
+## 📄 Licença
+
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+
+---
+
+## 🙋‍♂️ Autor
+
+Feito com 💙 por [Marcelo Manara](https://github.com/ManaraMarcelo)
