@@ -1,0 +1,6 @@
+@DeployManager_HostAddress = http://localhost:5290
+
+GET {{DeployManager_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
